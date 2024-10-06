@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="/css/feedback.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Feedback Form</h1>
+        <form action="/api/feedback" method="POST">
+            <input type="hidden" name="category" value="<%= category %>">
+
+            <label for="uniqueId">Unique ID:</label>
+            <input type="text" id="uniqueId" name="uniqueId" required>
+
+            <label for="subCategory">Sub Category:</label>
+            <select id="subCategory" name="subCategory" required>
+                <% subCategories.forEach(function(subCategory) { %>
+                    <option value="<%= subCategory %>"><%= subCategory %></option>
+                <% }); %>
+            </select>
+
+            <label for="feedbackType">Feedback Type:</label>
+            <select id="feedbackType" name="feedbackType" required>
+                <option value="Positive">Positive</option>
+                <option value="Negative">Negative</option>
+            </select>
+
+            <label for="feedback">Feedback:</label>
+            <textarea id="feedback" name="feedback" rows="4" required></textarea>
+
+            <label for="suggestion">Suggestion to Improve:</label>
+            <textarea id="suggestion" name="suggestion" rows="4" required></textarea>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+</body>
+</html>
