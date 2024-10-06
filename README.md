@@ -1,2 +1,3 @@
 # FeedbackHub-feedback-submit-service
 The Feedback Hub Project is an innovative web-based application designed to streamline the collection, analysis, and management of feedback from students and faculty.
+This service is a component of a microservice-based web application that manages the feedback submission process. After scanning a QR code, users (including students and faculty) are directed to a category selection page. Once a category is chosen, users are required to enter their unique ID, select a sub-category, and indicate whether their feedback is positive or negative. They can also provide comments and suggest improvements before submitting their feedback.
